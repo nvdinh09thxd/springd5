@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,18 +9,15 @@
 </head>
 <body>
 	<div id="header" style="background:#f9d581; height:50px;">
-		I am Header!
+		<tiles:insertAttribute name="header"></tiles:insertAttribute>
 	</div>
 	
-	
 	<div id="content" style="background:#57a706; color:#FFF; height:200px; margin:20px 0px">
-		<p>I am News 1</p>
-		<p>I am News 2</p>
-		<p>I am News 3</p>
+		<tiles:insertAttribute name="body"></tiles:insertAttribute>
 	</div>
 	
 	<div id="footer" style="background:#f9a6bf; height:50px;">
-		I am Footer!
+		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</div>
 </body>
 </html>

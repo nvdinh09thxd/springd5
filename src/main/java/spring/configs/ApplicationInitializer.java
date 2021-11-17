@@ -1,24 +1,26 @@
 package spring.configs;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class WebMvcApplicationInitializer implements WebApplicationInitializer {
-
+public class ApplicationInitializer implements WebApplicationInitializer {
+	
 	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-		appContext.register(AppConfig.class);
+	public void onStartup(ServletContext servletContext) {
 
-		// Dispatcher Servlet
-		DispatcherServlet servlet = new DispatcherServlet(appContext);
+		// Load Spring web application configuration
+		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+		context.register(AppConfig.class);
+
+		// Create and register the DispatcherServlet
+		DispatcherServlet servlet = new DispatcherServlet(context);
 		ServletRegistration.Dynamic registration = servletContext.addServlet("app", servlet);
 		registration.setLoadOnStartup(1);
 		registration.addMapping("/");
 	}
+	
 }
