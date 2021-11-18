@@ -3,3 +3,7 @@ encoding//src/main/webapp/WEB-INF/views/views/anews/add.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/views/anews/cat.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/views/anews/detail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/views/anews/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/views/cnews/add.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/views/cnews/cat.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/views/cnews/detail.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/views/cnews/index.jsp=UTF-8
